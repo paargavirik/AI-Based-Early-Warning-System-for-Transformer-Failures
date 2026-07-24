@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformer Failure Monitoring System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ⚡ Transformer Failure Monitoring System
+        </div>
+
+        <ul class="menu">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Monitoring</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="#">Alerts</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+        <div class="bell">
+            🔔
+        </div>
+
+        <div class="admin">
+            👤 Admin
+        </div>
+
+    </nav>
+
+    <!-- Alert -->
+
+    <div id="alertBox" class="alert">
+
+        ✅ Transformer Working Normally
+
+    </div>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <h1>AI-Based Early Warning System for Transformer Failures</h1>
+
+        <p>
+            Smart Monitoring • AI Prediction • Real-Time Alerts
+        </p>
+
+        <button>Start Monitoring</button>
+
+    </section>
+
+    <!-- Dashboard Cards -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <h2>🌡 Temperature</h2>
+
+            <h3 id="tempCard">32°C</h3>
+
+            <p>Normal</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>⚡ Voltage</h2>
+
+            <h3 id="voltCard">230V</h3>
+
+            <p>Stable</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>🔌 Current</h2>
+
+            <h3 id="currentCard">12A</h3>
+
+            <p>Normal</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>🤖 AI Health</h2>
+
+            <h3 id="healthCard">98%</h3>
+
+            <p>Healthy</p>
+
+        </div>
+
+    </section>
+
+    <!-- Live Status -->
+
+    <section class="status">
+
+        <h2>⚡ Live Transformer Status</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Parameter</th>
+
+                <th>Value</th>
+
+            </tr>
+
+            <tr>
+
+                <td>Transformer ID</td>
+
+                <td>TR-001</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Temperature</td>
+
+                <td id="temp">32°C</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Voltage</td>
+
+                <td id="voltage">230V</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Current</td>
+
+                <td id="current">12A</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Oil Level</td>
+
+                <td>Normal</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Health Status</td>
+
+                <td id="status" style="color:lime;">Healthy</td>
+
+            </tr>
+
+        </table>
+
+    </section>
+    <!-- Last Updated -->
+
+    <div class="time">
+
+        Last Updated :
+        <span id="time"></span>
+
+    </div>
+
+    <!-- AI Prediction -->
+
+    <section class="prediction">
+
+        <h2>🤖 AI Prediction</h2>
+
+        <div class="prediction-card">
+
+            <h3>Failure Probability</h3>
+
+            <h1 id="failure">8%</h1>
+
+            <p id="recommendation">
+                Transformer is operating normally.
+            </p>
+
+            <br>
+
+            <a href="report.html">
+
+                <button>
+                    Download AI Report
+                </button>
+
+            </a>
+
+            <br><br>
+
+            <button onclick="emergency()">
+
+                🚨 Emergency Shutdown
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Temperature Graph -->
+
+    <section class="graph">
+
+        <h2>Temperature Monitoring</h2>
+
+        <canvas id="myChart"></canvas>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        © 2026 Transformer Failure Monitoring System
+
+        <br><br>
+
+        Developed by Embedded Elite Team
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
